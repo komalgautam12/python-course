@@ -9,5 +9,6 @@ class Student(Base):
     name=Column (String(50))
     klass=Column(Integer)
 
+
 engine= create_engine("sqlite:///school.sqlite")
 Base.metadata.create_all(engine)
