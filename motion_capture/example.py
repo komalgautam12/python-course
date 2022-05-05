@@ -3,7 +3,7 @@ import cv2
 from cvzone.PoseModule import PoseDetector
 
 
-capture=cv2.VideoCapture(r'C:\Users\samsa\Downloads\Video\VED.mp4')
+capture=cv2.VideoCapture(r'C:\Users\samsa\Downloads\Video\Video.mp4')
 detector=PoseDetector()
 posList=[]
 while True:
@@ -23,3 +23,4 @@ while True:
     if key==ord('s'):
         with open('AnimationFile.txt','w') as f:
             f.writelines({'%s\n' % item for item in posList})
+cv2.destroyAllWindows()
